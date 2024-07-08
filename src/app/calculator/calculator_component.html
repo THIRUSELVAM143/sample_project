@@ -1,0 +1,30 @@
+<!-- calculator.component.html -->
+ <h4 class="text-center">calculator</h4>
+<div class="container">
+    
+    <div class="calculator">
+      <div class="calculator-display">
+        <input type="text" [(ngModel)]="display" disabled>
+      </div>
+      <div class="calculator-keys">
+        <button (click)="addToDisplay('7')">7</button>
+        <button (click)="addToDisplay('8')">8</button>
+        <button (click)="addToDisplay('9')">9</button>
+        <button (click)="addToDisplay('+')">+</button>
+        <button (click)="addToDisplay('4')">4</button>
+        <button (click)="addToDisplay('5')">5</button>
+        <button (click)="addToDisplay('6')">6</button>
+        <button (click)="addToDisplay('-')">-</button>
+        <button (click)="addToDisplay('1')">1</button>
+        <button (click)="addToDisplay('2')">2</button>
+        <button (click)="addToDisplay('3')">3</button>
+        <button (click)="addToDisplay('*')">*</button>
+        <button (click)="addToDisplay('0')">0</button>
+        <button (click)="addToDisplay('.')">.</button>
+        <button (click)="calculate()">=</button>
+        <button (click)="addToDisplay('/')">/</button>
+        <button (click)="clear()">AC</button>
+      </div>
+    </div>
+  </div>
+  

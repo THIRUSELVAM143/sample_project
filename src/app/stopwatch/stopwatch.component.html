@@ -1,0 +1,15 @@
+<!-- stopwatch.component.html -->
+ <h3 class="text-center">Stopwatch</h3>
+<div class="container">
+    <!-- <h2>Stopwatch</h2> -->
+    <div class="stopwatch">
+      <div class="display">{{ displayTime }}</div>
+      <div class="controls">
+        <button class="btn btn-primary" (click)="toggleTimer()">
+          {{ isRunning ? 'Stop' : 'Start' }}
+        </button>
+        <button class="btn btn-secondary" (click)="resetTimer()" [disabled]="!timerStarted">Reset</button>
+      </div>
+    </div>
+  </div>
+  

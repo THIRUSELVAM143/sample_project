@@ -1,0 +1,43 @@
+.js{
+    align-items: center;
+}
+.card-container {
+    perspective: 1000px; /* Creates a 3D space for 3D transforms */
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .card:hover {
+    transform: rotateY(180deg); /* Rotate the card 180 degrees on the Y-axis on hover */
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /*  Hides the back face of the card */
+  }
+  
+  .card-back {
+    transform: rotateY(180deg); /* Initially hide the back face by rotating 180 degrees */
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    /* font-size: 1.25rem; */
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  

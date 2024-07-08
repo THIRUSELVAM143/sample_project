@@ -1,0 +1,15 @@
+.card {
+    background-color: #17a2b8; /* Default background color */
+    color: #fff; /* Default text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    background-color: #138496; /* Darker background color on hover */
+    box-shadow: 0 0 20px #17a2b8; /* Glowing effect */
+  }
+  
