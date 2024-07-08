@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { UserService } from './user.service';
 
 @Component({
@@ -8,6 +8,9 @@ import { UserService } from './user.service';
 })
 export class FeatchDtaComponent {
   users: any[] = [];
+  page: number = 1;
+  totalRecords: number | undefined;
+  albums:any[]=[];
 
   constructor(private userService: UserService) { }
 
@@ -17,6 +20,12 @@ export class FeatchDtaComponent {
       console.log(this.users);
       console.log(data);
     });
+
+   
+      this.userService.getAlbums().subscribe(data => {
+        this.albums = data;
+        this.totalRecords = data.length; // Total number of records
+      });
   }
   funccall() {
     console.log('Button clicked!');
