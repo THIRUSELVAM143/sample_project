@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-date-range-picker',
@@ -11,8 +11,20 @@ export class DateRangePickerComponent {
 
   constructor(private fb: FormBuilder) {
     this.dateRangeForm = this.fb.group({
-      fromDate: [null],
-      toDate: [null]
+      name: ['', Validators.required],
+      age: ['', [Validators.required, Validators.min(10)]]
     });
+  }
+
+  onFormSubmit() {
+    if (this.dateRangeForm.valid) {
+      const formData = this.dateRangeForm.value;
+      console.log('Form submitted with data:', formData);
+
+      // Optionally reset the form after submission
+      this.dateRangeForm.reset();
+    } else {
+      console.error('Form invalid. Cannot submit.');
+    }
   }
 }
