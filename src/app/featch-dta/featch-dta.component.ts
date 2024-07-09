@@ -9,6 +9,7 @@ import { UserService } from './user.service';
 export class FeatchDtaComponent {
   users: any[] = [];
   page: number = 1;
+  // filteredAlbums: any[] = [];
   totalRecords: number | undefined;
   albums:any[]=[];
 

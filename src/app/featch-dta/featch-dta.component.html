@@ -35,7 +35,7 @@
     <div class="col-md-4 mb-3 " *ngFor="let album of albums | paginate: { itemsPerPage: 10, currentPage: page }">
       <div class="card bg-info mb-4 ">
         <div class="card-body">
-          <p class="card-title"><span class="text-danger"><h4 class="bg-info">Title:</h4></span>{{ album.title.length > 20 ? album.title.substring(0, 20) + '...' : album.title }}</p>
+          <p class="card-title"><span class="text-white"><h4 class="bg-info">Title:</h4></span>{{ album.title.length > 20 ? album.title.substring(0, 20) + '...' : album.title }}</p>
 
           <p class="card-text">Album ID: {{ album.id }}</p>
           <p class="card-text">User ID: {{ album.userId }}</p>
@@ -47,5 +47,7 @@
   <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>
 </div>
+
+
 
 
