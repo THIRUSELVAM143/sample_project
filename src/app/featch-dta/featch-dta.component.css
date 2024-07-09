@@ -13,6 +13,23 @@
     box-shadow: 0 0 20px #17a2b8; /* Glowing effect */
   }
 
+
+  /* styles.css or styles.scss */
+.toast-success {
+  background-color: #28a745; /* Green background for success */
+  color: #fff; /* White text color */
+}
+
+.toast-error {
+  background-color: #dc3545; /* Red background for error */
+  color: #fff; /* White text color */
+}
+
+.toast-top-right {
+  top: 70px; /* Adjust top position as needed */
+  right: 20px; /* Adjust right position as needed */
+}
+
   
   
   

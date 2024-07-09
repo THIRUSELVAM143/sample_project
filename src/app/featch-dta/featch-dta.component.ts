@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { UserService } from './user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-featch-dta',
@@ -12,7 +13,9 @@ export class FeatchDtaComponent {
   totalRecords: number | undefined;
   albums:any[]=[];
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+    private toastr: ToastrService
+  ) { }
 
   ngOnInit() {
     this.userService.getUsers().subscribe(data => {
@@ -24,7 +27,7 @@ export class FeatchDtaComponent {
    
       this.userService.getAlbums().subscribe(data => {
         this.albums = data;
-        this.totalRecords = data.length; // Total number of records
+        this.totalRecords = data.length; 
       });
   }
   funccall() {
