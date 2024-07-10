@@ -9,8 +9,8 @@
   }
   
   .card:hover {
-    background-color: #138496; /* Darker background color on hover */
-    box-shadow: 0 0 20px #17a2b8; /* Glowing effect */
+    background-color: #7b51e6; /* Darker background color on hover */
+    box-shadow: 0 0 20px #000000; /* Glowing effect */
   }
 
 
