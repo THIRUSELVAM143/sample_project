@@ -13,9 +13,7 @@ export class FeatchDtaComponent {
   totalRecords: number | undefined;
   albums:any[]=[];
 
-  constructor(private userService: UserService,
-    private toastr: ToastrService
-  ) { }
+  constructor(private userService: UserService  ) { }
 
   ngOnInit() {
     this.userService.getUsers().subscribe(data => {
